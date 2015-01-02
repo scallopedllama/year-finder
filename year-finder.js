@@ -66,9 +66,11 @@ fs.stat(checkPath, function(err, stat) {
 							console.log(i + ": " + result.title + " (" + result.release_date + ")");
 							i++;
 						});
-						var answer = readline.question("Which result to use ('s' to skip)? [0] ");
+						var answer = readline.question("Which result to use ('s' to skip, 'c' to specify year, '' to use [0])? ");
 						if (answer == '')
 							answer = '0';
+						if (answer == 'c')
+							answer = readline.question("Which year to use ('s' to skip)? ");
 						if (answer == 's') {
 							console.log("Skipping " + basename);
 							return;
