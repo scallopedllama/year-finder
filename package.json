@@ -1,0 +1,30 @@
+{
+  "name": "year-finder",
+  "version": "1.0.0",
+  "description": "Utility to find the years for your movie files and rename them accordingly",
+  "main": "year-finder.js",
+  "dependencies": {
+    "mime": "^1.2.11",
+    "readline-sync": "^0.4.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scallopedllama/year-finder.git"
+  },
+  "keywords": [
+    "xbmc",
+    "movie",
+    "moviedb",
+    "year"
+  ],
+  "author": "Joe Balough",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scallopedllama/year-finder/issues"
+  },
+  "homepage": "https://github.com/scallopedllama/year-finder"
+}
