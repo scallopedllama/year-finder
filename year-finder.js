@@ -66,8 +66,10 @@ fs.stat(checkPath, function(err, stat) {
 							console.log(i + ": " + result.title + " (" + result.release_date + ")");
 							i++;
 						});
-						var answer = readline.question("Which result to use? ");
-						if (answer == '') {
+						var answer = readline.question("Which result to use ('s' to skip)? [0] ");
+						if (answer == '')
+							answer = '0';
+						if (answer == 's') {
 							console.log("Skipping " + basename);
 							return;
 						}
