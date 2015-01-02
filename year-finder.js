@@ -52,9 +52,13 @@ fs.stat(checkPath, function(err, stat) {
 						useYear = movieData.results[0].release_date.substr(0, 4);
 					}
 					else if (movieData.total_results == 0) {
-						console.log("Movie not found: " + basename);
-						fs.appendFile('notfound.txt', basename + "\n");
-						return;
+						console.log("Movie not found: " + basename + ".");
+						var answer = readline.question("Enter year ('' to skip): ");
+						if (answer == '') {
+							fs.appendFile('notfound.txt', basename + "\n");
+							return;
+						}
+						useYear = answer;
 					}
 					// More than one? Ask the user
 					else
